@@ -3,12 +3,12 @@ FROM node:buster-slim as runtime
 
 WORKDIR /usr/src/app
 
-COPY ./daisy-ace/package.json .
-COPY ./daisy-ace/yarn.lock .
+COPY package.json .
+COPY yarn.lock .
 
 RUN yarn install
 
-COPY ./daisy-ace/config.json .
+COPY config.json .
 
 EXPOSE 80
 
